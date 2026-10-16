@@ -1,0 +1,458 @@
+hello test<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>내일배움카드교육 신청 | 발급 방법부터 신청까지</title>
+<meta name="description" content="내일배움카드 발급 방법부터 신청까지! 무료 상담을 신청하세요.">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+<style>
+:root{
+  --navy:#1B2A4A; --navy-2:#2C3F66; --orange:#F26B1D; --orange-dark:#D4560E;
+  --bg:#FFFFFF; --bg-soft:#F5F7FA; --line:#E3E7EE; --text:#1A1F2B; --muted:#5B6475;
+  --ph:#D9DDE3; --radius:14px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Pretendard,"Malgun Gothic",sans-serif;color:var(--text);background:var(--bg);font-size:16px;line-height:1.65;word-break:keep-all}
+a{color:inherit;text-decoration:none}
+button{font:inherit;cursor:pointer}
+.wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+.sec{padding:80px 0}
+.sec.soft{background:var(--bg-soft)}
+.eyebrow{display:inline-block;font-size:14px;font-weight:700;color:var(--orange);letter-spacing:.02em;margin-bottom:10px}
+h2{font-size:30px;line-height:1.35;color:var(--navy);font-weight:800;margin-bottom:12px}
+.lead{color:var(--muted);font-size:17px;margin-bottom:36px}
+.todo{color:#9AA1AE;font-weight:500}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;border:0;border-radius:999px;padding:16px 28px;font-weight:700;font-size:17px;transition:.15s}
+.btn-main{background:var(--orange);color:#fff}
+.btn-main:hover{background:var(--orange-dark)}
+.btn-line{background:#fff;color:var(--navy);border:1.5px solid var(--line)}
+.btn-line:hover{border-color:var(--navy)}
+.ph{background:var(--ph);border-radius:var(--radius);display:flex;align-items:center;justify-content:center;color:#7C8492;font-size:15px}
+
+/* 맨 위 줄 */
+header{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.96);border-bottom:1px solid var(--line);backdrop-filter:blur(6px)}
+header .wrap{display:flex;align-items:center;justify-content:space-between;height:68px}
+.logo{font-weight:800;font-size:19px;color:var(--navy)}
+.logo b{color:var(--orange)}
+nav{display:flex;gap:26px;font-size:15px;color:var(--muted)}
+nav a:hover{color:var(--navy)}
+.top-call{font-weight:700;color:var(--navy);font-size:15px;border:1.5px solid var(--line);border-radius:999px;padding:8px 16px}
+
+/* 첫 화면 */
+.hero{padding:72px 0 80px;background:linear-gradient(180deg,#F3F6FB 0%,#fff 100%)}
+.hero .wrap{display:grid;grid-template-columns:1.1fr 1fr;gap:48px;align-items:center}
+.badge{display:inline-block;background:#FFF1E8;color:var(--orange-dark);font-weight:700;font-size:14px;border-radius:999px;padding:6px 14px;margin-bottom:18px}
+.hero h1{font-size:46px;line-height:1.25;color:var(--navy);font-weight:800;margin-bottom:18px}
+.hero h1 em{font-style:normal;color:var(--orange)}
+.hero p{font-size:18px;color:var(--muted);margin-bottom:32px}
+.hero .btns{display:flex;gap:12px;flex-wrap:wrap}
+.hero .ph{aspect-ratio:4/3.4}
+
+/* 4단계 */
+.steps{background:#fff;border:1px solid var(--line);border-radius:20px;padding:32px}
+.bar{height:10px;background:var(--bg-soft);border-radius:99px;overflow:hidden;margin-bottom:24px}
+.bar i{display:block;height:100%;width:25%;background:linear-gradient(90deg,var(--navy-2),var(--orange));border-radius:99px;transition:width .35s}
+.step-btns{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.step-btn{border:1.5px solid var(--line);background:#fff;border-radius:var(--radius);padding:16px 12px;text-align:left;transition:.15s}
+.step-btn .n{display:inline-flex;width:30px;height:30px;border-radius:50%;background:var(--bg-soft);color:var(--muted);font-weight:800;align-items:center;justify-content:center;margin-bottom:8px;font-size:14px}
+.step-btn .t{display:block;font-weight:700;color:var(--navy);font-size:16px}
+.step-btn.done .n{background:var(--navy);color:#fff}
+.step-btn.on{border-color:var(--orange);box-shadow:0 0 0 3px #FFE3D2}
+.step-btn.on .n{background:var(--orange);color:#fff}
+.step-desc{margin-top:22px;padding:20px 22px;background:var(--bg-soft);border-radius:var(--radius);display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap}
+.step-desc p{font-size:16px}
+.step-desc .next{background:var(--navy);color:#fff;border:0;border-radius:999px;padding:10px 20px;font-weight:700}
+.stamp{display:none;font-weight:800;color:var(--orange)}
+.steps.finish .stamp{display:inline}
+
+/* 맞춤 찾기 */
+.finder{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.q{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:24px}
+.q h3{font-size:17px;color:var(--navy);margin-bottom:14px}
+.q h3 span{color:var(--orange);margin-right:6px}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{border:1.5px solid var(--line);background:#fff;border-radius:999px;padding:9px 16px;font-size:15px;color:var(--text);transition:.12s}
+.chip:hover{border-color:var(--navy-2)}
+.chip.on{background:var(--navy);border-color:var(--navy);color:#fff}
+.finder-result{margin-top:20px;background:var(--navy);color:#fff;border-radius:var(--radius);padding:22px 26px;display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap}
+.finder-result p{font-size:16px}
+.finder-result b{color:#FFC59E}
+
+/* 과정 카드 */
+.filter{display:flex;gap:8px;margin-bottom:24px;flex-wrap:wrap}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;display:flex;flex-direction:column}
+.card .ph{border-radius:0;aspect-ratio:16/9}
+.card-body{padding:20px;display:flex;flex-direction:column;gap:12px;flex:1}
+.tag{align-self:flex-start;font-size:13px;font-weight:700;color:var(--navy-2);background:#EAF0FA;border-radius:6px;padding:3px 10px}
+.card h3{font-size:18px;color:var(--navy)}
+.facts{display:grid;grid-template-columns:repeat(3,1fr);border:1px solid var(--line);border-radius:10px;overflow:hidden}
+.facts div{padding:10px 8px;text-align:center;border-left:1px solid var(--line)}
+.facts div:first-child{border-left:0}
+.facts dt{font-size:12px;color:var(--muted)}
+.facts dd{font-size:14px;font-weight:700;color:var(--text)}
+.card .btn{margin-top:auto;padding:12px;font-size:15px}
+
+/* 강사 */
+.teacher{display:grid;grid-template-columns:1fr 1.2fr;gap:48px;align-items:center}
+.teacher .ph{aspect-ratio:4/5;font-size:16px}
+.teacher h3{font-size:34px;color:var(--navy);margin:6px 0 16px}
+.teacher ul{list-style:none;display:grid;gap:10px}
+.teacher li{padding:14px 18px;background:#fff;border:1px solid var(--line);border-radius:12px}
+
+/* 상담 신청 */
+.form-box{display:grid;grid-template-columns:1fr 1.4fr;gap:48px;align-items:start}
+.contact-info{background:var(--navy);color:#fff;border-radius:20px;padding:34px}
+.contact-info h3{font-size:22px;margin-bottom:18px}
+.contact-info dl{display:grid;gap:14px}
+.contact-info dt{font-size:13px;color:#AEB9CF}
+.contact-info dd{font-size:17px;font-weight:600;word-break:break-all}
+form{background:#fff;border:1px solid var(--line);border-radius:20px;padding:34px;display:grid;gap:18px}
+.row2{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+label.f{display:grid;gap:7px;font-weight:600;font-size:15px}
+label.f small{color:var(--orange);font-weight:700}
+input[type=text],input[type=tel],select,textarea{width:100%;border:1.5px solid var(--line);border-radius:10px;padding:13px 14px;font:inherit;font-size:16px;background:#fff;color:var(--text)}
+input:focus,select:focus,textarea:focus{outline:0;border-color:var(--navy-2);box-shadow:0 0 0 3px #E2E9F5}
+textarea{min-height:120px;resize:vertical}
+.agree{display:flex;gap:10px;align-items:flex-start;font-size:14px;color:var(--muted);background:var(--bg-soft);padding:14px;border-radius:10px}
+.agree input{margin-top:4px;width:18px;height:18px;accent-color:var(--orange)}
+.hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+.msg{font-size:15px;font-weight:600;min-height:22px}
+.msg.ok{color:#1F8A4C}.msg.err{color:#D23B3B}
+form .btn{width:100%}
+form .btn:disabled{opacity:.6;cursor:wait}
+
+footer{background:#121B2F;color:#AEB9CF;padding:40px 0 110px;font-size:14px}
+footer b{color:#fff;font-size:16px;display:block;margin-bottom:8px}
+
+/* 늘 보이는 버튼 */
+.float{position:fixed;right:24px;bottom:24px;z-index:30;background:var(--orange);color:#fff;font-weight:800;border-radius:999px;padding:16px 22px;box-shadow:0 8px 24px rgba(242,107,29,.35);display:flex;align-items:center;gap:8px}
+.float:hover{background:var(--orange-dark)}
+.mbar{display:none}
+
+/* 태블릿 */
+@media (max-width:960px){
+  nav{display:none}
+  .hero .wrap,.teacher,.form-box{grid-template-columns:1fr}
+  .hero h1{font-size:38px}
+  .finder{grid-template-columns:1fr}
+  .cards{grid-template-columns:1fr 1fr}
+  .teacher .ph{aspect-ratio:16/10}
+}
+/* 휴대폰 */
+@media (max-width:640px){
+  .sec{padding:56px 0}
+  h2{font-size:24px}
+  .lead{font-size:16px;margin-bottom:26px}
+  .hero{padding:40px 0 52px}
+  .hero h1{font-size:30px}
+  .hero p{font-size:16px}
+  .hero .btn{flex:1}
+  .top-call{display:none}
+  .steps{padding:20px}
+  .step-btns{grid-template-columns:1fr 1fr}
+  .cards{grid-template-columns:1fr}
+  .row2{grid-template-columns:1fr}
+  form,.contact-info{padding:24px}
+  .teacher h3{font-size:26px}
+  .float{display:none}
+  .mbar{display:grid;grid-template-columns:1fr 1.4fr;position:fixed;left:0;right:0;bottom:0;z-index:30;background:#fff;border-top:1px solid var(--line);padding:10px 12px calc(10px + env(safe-area-inset-bottom));gap:10px}
+  .mbar a{display:flex;align-items:center;justify-content:center;border-radius:12px;padding:14px;font-weight:800;font-size:16px}
+  .mbar .call{background:var(--bg-soft);color:var(--navy)}
+  .mbar .ask{background:var(--orange);color:#fff}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <a href="#top" class="logo">내일배움카드<b>교육</b> 신청</a>
+    <nav>
+      <a href="#steps">신청 순서</a>
+      <a href="#finder">맞춤 찾기</a>
+      <a href="#courses">과정 안내</a>
+      <a href="#teacher">강사 소개</a>
+      <a href="#apply">상담 신청</a>
+    </nav>
+    <a class="top-call js-call" href="#apply">전화 <span class="js-phone"></span></a>
+  </div>
+</header>
+
+<main id="top">
+  <!-- 첫 화면 -->
+  <section class="hero">
+    <div class="wrap">
+      <div>
+        <span class="badge">무료 상담</span>
+        <h1>내일배움카드<br><em>발급 방법부터 신청까지!</em></h1>
+        <p>카드가 없어도 괜찮아요. 발급부터 과정 선택, 수강 신청까지 한 번에 안내해 드립니다.</p>
+        <div class="btns">
+          <a href="#apply" class="btn btn-main">무료 상담 신청</a>
+          <a href="#steps" class="btn btn-line">신청 순서 보기</a>
+        </div>
+      </div>
+      <div class="ph">대표 사진 자리</div>
+    </div>
+  </section>
+
+  <!-- 4단계 -->
+  <section class="sec soft" id="steps">
+    <div class="wrap">
+      <span class="eyebrow">STEP 1 → 4</span>
+      <h2>4단계면 수강까지 끝나요</h2>
+      <p class="lead">단계를 눌러 보세요. 지금 어디쯤인지 막대로 보여 드려요.</p>
+      <div class="steps" id="stepBox">
+        <div class="bar"><i id="stepBar"></i></div>
+        <div class="step-btns">
+          <button class="step-btn on" data-i="0"><span class="n">1</span><span class="t">상담 신청</span></button>
+          <button class="step-btn" data-i="1"><span class="n">2</span><span class="t">카드 발급 안내</span></button>
+          <button class="step-btn" data-i="2"><span class="n">3</span><span class="t">과정 고르기</span></button>
+          <button class="step-btn" data-i="3"><span class="n">4</span><span class="t">수강 신청</span></button>
+        </div>
+        <div class="step-desc">
+          <p id="stepText"></p>
+          <span class="stamp">✔ 모든 단계 완료!</span>
+          <button class="next" id="stepNext">다음 단계</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 맞춤 찾기 -->
+  <section class="sec" id="finder">
+    <div class="wrap">
+      <span class="eyebrow">맞춤 찾기</span>
+      <h2>나에게 맞는 과정 찾기</h2>
+      <p class="lead">3가지만 골라 주세요. 고른 내용이 상담 신청서에 자동으로 채워집니다.</p>
+      <div class="finder">
+        <div class="q"><h3><span>Q1</span>관심 있는 분야는?</h3>
+          <div class="chips" data-q="interest">
+            <button class="chip" data-v="(입력 필요) 분야 1">(입력 필요) 분야 1</button>
+            <button class="chip" data-v="(입력 필요) 분야 2">(입력 필요) 분야 2</button>
+            <button class="chip" data-v="(입력 필요) 분야 3">(입력 필요) 분야 3</button>
+            <button class="chip" data-v="아직 모르겠어요">아직 모르겠어요</button>
+          </div></div>
+        <div class="q"><h3><span>Q2</span>내일배움카드가 있나요?</h3>
+          <div class="chips" data-q="card">
+            <button class="chip" data-v="있어요">있어요</button>
+            <button class="chip" data-v="없어요">없어요</button>
+            <button class="chip" data-v="잘 모르겠어요">잘 모르겠어요</button>
+          </div></div>
+        <div class="q"><h3><span>Q3</span>원하는 수업 방식은?</h3>
+          <div class="chips" data-q="method">
+            <button class="chip" data-v="온라인">온라인</button>
+            <button class="chip" data-v="직접 출석">직접 출석</button>
+            <button class="chip" data-v="상관없어요">상관없어요</button>
+          </div></div>
+      </div>
+      <div class="finder-result">
+        <p id="finderText">질문 3개 중 <b>0개</b>를 골랐어요.</p>
+        <a href="#apply" class="btn btn-main" style="padding:12px 22px;font-size:15px">이대로 상담 신청</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 과정 카드 -->
+  <section class="sec soft" id="courses">
+    <div class="wrap">
+      <span class="eyebrow">과정 안내</span>
+      <h2>한눈에 비교하는 과정</h2>
+      <p class="lead">환급 여부, 학습 시간, 수료 기준을 카드에서 바로 확인하세요.</p>
+      <div class="filter chips" id="courseFilter">
+        <button class="chip on" data-f="all">전체</button>
+        <button class="chip" data-f="재직자">재직자</button>
+        <button class="chip" data-f="구직자">구직자</button>
+      </div>
+      <div class="cards">
+        <article class="card" data-t="재직자">
+          <div class="ph">과정 사진 자리</div>
+          <div class="card-body">
+            <span class="tag">재직자</span>
+            <h3>과정명 <span class="todo">(입력 필요)</span></h3>
+            <dl class="facts"><div><dt>환급 여부</dt><dd class="todo">(입력 필요)</dd></div><div><dt>학습 시간</dt><dd class="todo">(입력 필요)</dd></div><div><dt>수료 기준</dt><dd class="todo">(입력 필요)</dd></div></dl>
+            <a href="#apply" class="btn btn-line js-course">이 과정 상담하기</a>
+          </div>
+        </article>
+        <article class="card" data-t="구직자">
+          <div class="ph">과정 사진 자리</div>
+          <div class="card-body">
+            <span class="tag">구직자</span>
+            <h3>과정명 <span class="todo">(입력 필요)</span></h3>
+            <dl class="facts"><div><dt>환급 여부</dt><dd class="todo">(입력 필요)</dd></div><div><dt>학습 시간</dt><dd class="todo">(입력 필요)</dd></div><div><dt>수료 기준</dt><dd class="todo">(입력 필요)</dd></div></dl>
+            <a href="#apply" class="btn btn-line js-course">이 과정 상담하기</a>
+          </div>
+        </article>
+        <article class="card" data-t="재직자">
+          <div class="ph">과정 사진 자리</div>
+          <div class="card-body">
+            <span class="tag">재직자</span>
+            <h3>과정명 <span class="todo">(입력 필요)</span></h3>
+            <dl class="facts"><div><dt>환급 여부</dt><dd class="todo">(입력 필요)</dd></div><div><dt>학습 시간</dt><dd class="todo">(입력 필요)</dd></div><div><dt>수료 기준</dt><dd class="todo">(입력 필요)</dd></div></dl>
+            <a href="#apply" class="btn btn-line js-course">이 과정 상담하기</a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 강사 소개 -->
+  <section class="sec" id="teacher">
+    <div class="wrap teacher">
+      <div class="ph">강사 사진 자리 (크게)</div>
+      <div>
+        <span class="eyebrow">강사 소개</span>
+        <h3>강사 이름 <span class="todo">(입력 필요)</span></h3>
+        <p class="lead" style="margin-bottom:22px">교육회사 대표가 직접 상담하고 안내해 드립니다.</p>
+        <ul>
+          <li>경력 <span class="todo">(입력 필요)</span></li>
+          <li>자격 <span class="todo">(입력 필요)</span></li>
+          <li>담당 과정 <span class="todo">(입력 필요)</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- 상담 신청 -->
+  <section class="sec soft" id="apply">
+    <div class="wrap">
+      <span class="eyebrow">무료 상담</span>
+      <h2>상담 신청</h2>
+      <p class="lead">남겨 주시면 확인 후 연락드립니다.</p>
+      <div class="form-box">
+        <div class="contact-info">
+          <h3>내일배움카드교육 신청</h3>
+          <dl>
+            <div><dt>전화</dt><dd class="js-phone"></dd></div>
+            <div><dt>이메일</dt><dd>peech1996@gmail.com</dd></div>
+            <div><dt>상담 시간</dt><dd class="todo">(입력 필요)</dd></div>
+          </dl>
+        </div>
+        <form id="applyForm" novalidate>
+          <div class="row2">
+            <label class="f"><span>이름 <small>*필수</small></span><input type="text" name="name" maxlength="30" autocomplete="name" required></label>
+            <label class="f"><span>연락처 <small>*필수</small></span><input type="tel" name="phone" maxlength="20" autocomplete="tel" placeholder="010-0000-0000" required></label>
+          </div>
+          <div class="row2">
+            <label class="f">관심 분야<input type="text" name="interest" maxlength="50"></label>
+            <label class="f">내일배움카드
+              <select name="card"><option value="">선택</option><option>있어요</option><option>없어요</option><option>잘 모르겠어요</option></select>
+            </label>
+          </div>
+          <label class="f">원하는 수업 방식
+            <select name="method"><option value="">선택</option><option>온라인</option><option>직접 출석</option><option>상관없어요</option></select>
+          </label>
+          <label class="f">문의 내용<textarea name="message" maxlength="1000" placeholder="궁금한 점을 자유롭게 적어 주세요."></textarea></label>
+          <div class="hp" aria-hidden="true"><label>웹사이트<input type="text" name="website" tabindex="-1" autocomplete="off"></label></div>
+          <label class="agree"><input type="checkbox" name="agree"> <span>상담을 위해 이름과 연락처를 받는 것에 동의합니다. (필수) 받은 정보는 상담에만 쓰고, 상담이 끝나면 삭제합니다.</span></label>
+          <p class="msg" id="formMsg" role="status"></p>
+          <button class="btn btn-main" type="submit" id="submitBtn">상담 신청하기</button>
+        </form>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <b>내일배움카드교육 신청</b>
+    전화 <span class="js-phone"></span> · 이메일 peech1996@gmail.com<br>
+    주소 <span>(입력 필요)</span> · 사업자등록번호 <span>(입력 필요)</span>
+  </div>
+</footer>
+
+<a href="#apply" class="float">상담 신청</a>
+<div class="mbar"><a class="call js-call" href="#apply">전화하기</a><a class="ask" href="#apply">무료 상담 신청</a></div>
+
+<script>
+// ===== 여기만 바꾸면 됩니다 =====
+const PHONE = "";            // 전화번호를 넣으면 전화 버튼이 바로 걸립니다. 예: "010-0000-0000"
+const FORM_URL = "https://script.google.com/macros/s/AKfycbxo0eA-50dsTXq3s-j54TxxRTVey5x8Xj1MnkXeOwAtwBkI04wyb57-eiQSwpxM_M1u3g/exec";         // 구글 Apps Script 웹 앱 주소
+// ================================
+
+document.querySelectorAll('.js-phone').forEach(e => e.textContent = PHONE || '(입력 필요)');
+if (PHONE) document.querySelectorAll('.js-call').forEach(e => e.href = 'tel:' + PHONE.replace(/[^0-9+]/g, ''));
+
+// 4단계 진행 막대
+const stepTexts = [
+  '① 아래 상담 신청서에 이름과 연락처를 남겨 주세요. 1분이면 됩니다.',
+  '② 카드가 없다면 발급 방법을 차근차근 안내해 드립니다.',
+  '③ 관심 분야와 일정에 맞는 과정을 함께 골라 드립니다.',
+  '④ 고른 과정에 수강 신청하면 준비 끝! 배움을 시작하세요.'
+];
+const stepBtns = [...document.querySelectorAll('.step-btn')];
+let step = 0;
+function showStep(i) {
+  step = i;
+  stepBtns.forEach((b, k) => { b.classList.toggle('on', k === i); b.classList.toggle('done', k < i); });
+  document.getElementById('stepBar').style.width = ((i + 1) * 25) + '%';
+  document.getElementById('stepText').textContent = stepTexts[i];
+  document.getElementById('stepBox').classList.toggle('finish', i === 3);
+  document.getElementById('stepNext').textContent = i === 3 ? '상담 신청하러 가기' : '다음 단계';
+}
+stepBtns.forEach(b => b.addEventListener('click', () => showStep(+b.dataset.i)));
+document.getElementById('stepNext').addEventListener('click', () => {
+  if (step < 3) showStep(step + 1); else location.hash = '#apply';
+});
+showStep(0);
+
+// 맞춤 찾기 → 상담 신청서 자동 채우기
+const form = document.getElementById('applyForm');
+const picks = {};
+document.querySelectorAll('#finder .chips').forEach(group => {
+  group.addEventListener('click', e => {
+    const c = e.target.closest('.chip'); if (!c) return;
+    group.querySelectorAll('.chip').forEach(x => x.classList.remove('on'));
+    c.classList.add('on');
+    picks[group.dataset.q] = c.dataset.v;
+    form.elements[group.dataset.q].value = c.dataset.v;
+    const n = Object.keys(picks).length;
+    document.getElementById('finderText').innerHTML = n < 3
+      ? '질문 3개 중 <b>' + n + '개</b>를 골랐어요.'
+      : '<b>준비 완료!</b> 고른 내용이 상담 신청서에 채워졌어요.';
+  });
+});
+
+// 과정 골라 보기
+document.getElementById('courseFilter').addEventListener('click', e => {
+  const c = e.target.closest('.chip'); if (!c) return;
+  document.querySelectorAll('#courseFilter .chip').forEach(x => x.classList.remove('on'));
+  c.classList.add('on');
+  document.querySelectorAll('.card').forEach(card => {
+    card.style.display = (c.dataset.f === 'all' || card.dataset.t === c.dataset.f) ? '' : 'none';
+  });
+});
+
+// 상담 신청 보내기
+const startedAt = Date.now();
+const msg = document.getElementById('formMsg');
+const btn = document.getElementById('submitBtn');
+function say(text, ok) { msg.textContent = text; msg.className = 'msg ' + (ok ? 'ok' : 'err'); }
+form.addEventListener('submit', async e => {
+  e.preventDefault();
+  const f = form.elements;
+  if (!f.name.value.trim()) return say('이름을 적어 주세요.'), f.name.focus();
+  if (!/^[0-9\-+ ]{9,20}$/.test(f.phone.value.trim())) return say('연락처를 숫자로 적어 주세요. 예: 010-0000-0000'), f.phone.focus();
+  if (!f.agree.checked) return say('개인정보 동의에 체크해 주세요.');
+  if (!FORM_URL) return say('아직 문의 접수 연결 전입니다. 전화로 연락 주세요.');
+  const data = {
+    name: f.name.value.trim(), phone: f.phone.value.trim(), interest: f.interest.value.trim(),
+    card: f.card.value, method: f.method.value, message: f.message.value.trim(),
+    website: f.website.value, elapsed: Date.now() - startedAt
+  };
+  btn.disabled = true; btn.textContent = '보내는 중...'; say('', true);
+  try {
+    const res = await fetch(FORM_URL, { method: 'POST', headers: { 'Content-Type': 'text/plain;charset=utf-8' }, body: JSON.stringify(data) });
+    const out = await res.json();
+    if (out.ok) { form.reset(); say('신청이 접수되었습니다. 곧 연락드릴게요!', true); }
+    else say(out.error || '접수하지 못했어요. 잠시 후 다시 시도해 주세요.');
+  } catch (err) {
+    say('접수하지 못했어요. 잠시 후 다시 시도하거나 전화 주세요.');
+  }
+  btn.disabled = false; btn.textContent = '상담 신청하기';
+});
+</script>
+</body>
+</html>
