@@ -5,127 +5,139 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>국민내일배움카드란? | 내일배움카드교육 신청</title>
 <meta name="description" content="국민내일배움카드가 무엇인지, 누가 받을 수 있고 얼마를 지원받는지 쉽게 정리했어요.">
+<meta name="theme-color" content="#0B0C10">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
 <style>
 :root{
-  --navy:#1B2A4A; --navy-2:#2C3F66; --orange:#F26B1D; --orange-dark:#D4560E;
-  --bg:#FFFFFF; --bg-soft:#F5F7FA; --line:#E3E7EE; --text:#1A1F2B; --muted:#5B6475;
-  --ph:#D9DDE3; --radius:14px;
+  --bg:#0B0C10; --bg-2:#13151B; --card:#1A1D25; --card-2:#20242E; --line:#2B303C;
+  --text:#F3F5F9; --muted:#AAB2C0; --dim:#7D8696;
+  --orange:#FF8A3D; --orange-2:#FFB47E; --yellow:#FFD166; --mint:#5FD3B3; --sky:#7DB7FF; --radius:16px;
 }
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
-body{font-family:Pretendard,"Malgun Gothic",sans-serif;color:var(--text);background:var(--bg);font-size:16px;line-height:1.65;word-break:keep-all}
+body{font-family:Pretendard,"Malgun Gothic",sans-serif;background:var(--bg);color:var(--text);font-size:16px;line-height:1.7;word-break:keep-all}
 a{color:inherit;text-decoration:none}
-button{font:inherit;cursor:pointer}
 .wrap{max-width:1120px;margin:0 auto;padding:0 20px}
-.sec{padding:80px 0}
-.sec.soft{background:var(--bg-soft)}
-.eyebrow{display:inline-block;font-size:14px;font-weight:700;color:var(--orange);letter-spacing:.02em;margin-bottom:10px}
-h2{font-size:30px;line-height:1.35;color:var(--navy);font-weight:800;margin-bottom:12px}
+.sec{padding:84px 0}
+.sec.alt{background:var(--bg-2)}
+.eyebrow{display:inline-block;font-size:14px;font-weight:700;color:var(--orange);margin-bottom:10px;letter-spacing:.02em}
+h2{font-size:32px;line-height:1.35;font-weight:800;margin-bottom:12px}
 .lead{color:var(--muted);font-size:17px;margin-bottom:36px}
-.todo{color:#9AA1AE;font-weight:500}
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;border:0;border-radius:999px;padding:16px 28px;font-weight:700;font-size:17px;transition:.15s}
-.btn-main{background:var(--orange);color:#fff}
-.btn-main:hover{background:var(--orange-dark)}
-.btn-line{background:#fff;color:var(--navy);border:1.5px solid var(--line)}
-.btn-line:hover{border-color:var(--navy)}
-.ph{background:var(--ph);border-radius:var(--radius);display:flex;align-items:center;justify-content:center;color:#7C8492;font-size:15px}
-svg.ill{display:block;width:100%;height:auto;border-radius:var(--radius)}
-.card svg.ill{border-radius:0}
+.btn{display:inline-flex;align-items:center;justify-content:center;border-radius:999px;padding:16px 28px;font-weight:700;font-size:17px;transition:.15s}
+.btn-main{background:var(--orange);color:#1A0E05}
+.btn-main:hover{background:var(--orange-2)}
+.btn-line{border:1.5px solid #3A4050;color:var(--text)}
+.btn-line:hover{border-color:var(--text)}
+svg.ill{display:block;width:100%;height:auto}
 
-/* 맨 위 줄 */
-header{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.96);border-bottom:1px solid var(--line);backdrop-filter:blur(6px)}
-header .wrap{display:flex;align-items:center;justify-content:space-between;height:68px}
-.logo{font-weight:800;font-size:19px;color:var(--navy)}
+header{position:sticky;top:0;z-index:20;background:rgba(11,12,16,.9);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+header .wrap{display:flex;align-items:center;justify-content:space-between;height:66px}
+.logo{font-weight:800;font-size:19px}
 .logo b{color:var(--orange)}
 nav{display:flex;gap:26px;font-size:15px;color:var(--muted)}
-nav a:hover{color:var(--navy)}
-.top-call{font-weight:700;color:var(--navy);font-size:15px;border:1.5px solid var(--line);border-radius:999px;padding:8px 16px}
+nav a:hover{color:var(--text)}
+.top-call{font-weight:700;font-size:15px;background:var(--orange);color:#1A0E05;border-radius:999px;padding:9px 18px}
 
-/* 첫 화면 */
-.hero{padding:72px 0 80px;background:linear-gradient(180deg,#F3F6FB 0%,#fff 100%)}
-.hero .wrap{display:grid;grid-template-columns:1.1fr 1fr;gap:48px;align-items:center}
-.badge{display:inline-block;background:#FFF1E8;color:var(--orange-dark);font-weight:700;font-size:14px;border-radius:999px;padding:6px 14px;margin-bottom:18px}
-.hero h1{font-size:46px;line-height:1.25;color:var(--navy);font-weight:800;margin-bottom:18px}
+.hero{padding:64px 0 84px;background:radial-gradient(circle at 80% 30%,#2A1A10 0%,var(--bg) 55%)}
+.hero .wrap{display:grid;grid-template-columns:1.05fr 1fr;gap:40px;align-items:center}
+.crumb{font-size:14px;color:var(--dim);margin-bottom:16px}
+.crumb a{text-decoration:underline}
+.badge{display:inline-block;background:#2A1A10;color:var(--orange-2);font-weight:700;font-size:14px;border-radius:999px;padding:6px 14px;margin-bottom:18px}
+.hero h1{font-size:46px;line-height:1.25;font-weight:800;margin-bottom:20px}
 .hero h1 em{font-style:normal;color:var(--orange)}
-.hero p{font-size:18px;color:var(--muted);margin-bottom:32px}
-.hero .btns{display:flex;gap:12px;flex-wrap:wrap}
-.hero .ph{aspect-ratio:4/3.4}
+.def{background:var(--card);border-left:4px solid var(--orange);padding:16px 20px;border-radius:0 12px 12px 0;font-size:18px;font-weight:600;margin-bottom:28px}
+.btns{display:flex;gap:12px;flex-wrap:wrap}
 
-/* 설명 페이지 전용 */
-.crumb{font-size:14px;color:var(--muted);margin-bottom:14px}
-.crumb a{color:var(--navy-2);text-decoration:underline}
-.def{background:#fff;border-left:4px solid var(--orange);padding:16px 20px;border-radius:0 12px 12px 0;font-size:18px;color:var(--navy);font-weight:600;margin-bottom:28px;box-shadow:0 1px 0 var(--line)}
 .nums{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
-.num{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:24px;text-align:center}
-.num b{display:block;font-size:34px;color:var(--navy);font-weight:800;line-height:1.2}
+.num{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:26px 22px;text-align:center}
+.num svg{width:84px;height:84px;margin:0 auto 12px;display:block}
+.num b{display:block;font-size:34px;font-weight:800;line-height:1.2}
 .num b em{font-style:normal;color:var(--orange)}
 .num span{color:var(--muted);font-size:15px}
-.two{display:grid;grid-template-columns:1fr 1fr;gap:20px}
-.box{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:26px}
-.box h3{font-size:19px;color:var(--navy);margin-bottom:12px;display:flex;align-items:center;gap:8px}
-.box h3 i{font-style:normal;display:inline-flex;width:28px;height:28px;border-radius:8px;background:#EAF0FA;color:var(--navy);align-items:center;justify-content:center;font-size:15px}
-.box ul{margin-left:18px;color:var(--text);display:grid;gap:6px;font-size:15.5px}
-.box p{color:var(--muted);font-size:15.5px}
-.box.ok{border-top:4px solid var(--navy)}
-.box.no{border-top:4px solid #C5CEDC}
-table.t{width:100%;border-collapse:collapse;background:#fff;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;font-size:15.5px}
+
+.who{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.person{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:24px;display:grid;grid-template-columns:120px 1fr;gap:18px;align-items:center}
+.person h3{font-size:19px;margin-bottom:6px}
+.person p{color:var(--muted);font-size:15.5px}
+.plus{margin-top:20px;background:#1E2A24;border:1px solid #2E4A3E;border-radius:var(--radius);padding:18px 22px;color:#CFEFE4;font-size:15.5px}
+.plus b{color:var(--mint)}
+details.no{margin-top:12px;background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:18px 22px}
+details.no summary{cursor:pointer;font-weight:700}
+details.no ul{margin:12px 0 0 18px;color:var(--muted);display:grid;gap:4px;font-size:15.5px}
+
+.support{display:grid;grid-template-columns:1fr 260px;gap:28px;align-items:center}
+table.t{width:100%;border-collapse:collapse;background:var(--card);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;font-size:15.5px}
 .t th,.t td{padding:16px 18px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
-.t th{width:22%;background:#F7F9FC;color:var(--navy);font-weight:700}
+.t th{width:24%;background:var(--card-2);font-weight:700;color:var(--orange-2)}
 .t tr:last-child th,.t tr:last-child td{border-bottom:0}
-.t small{display:block;color:var(--muted);margin-top:4px;font-size:14px}
-.flow{display:grid;grid-template-columns:repeat(5,1fr);gap:0;list-style:none;counter-reset:f}
-.flow li{position:relative;padding:0 10px;text-align:center}
-.flow li::before{counter-increment:f;content:counter(f);display:flex;width:52px;height:52px;margin:0 auto 12px;border-radius:50%;background:var(--navy);color:#fff;font-weight:800;font-size:20px;align-items:center;justify-content:center;position:relative;z-index:1}
-.flow li::after{content:"";position:absolute;top:26px;left:50%;width:100%;height:2px;background:#C5CEDC}
-.flow li:last-child::after{display:none}
-.flow h3{font-size:16px;color:var(--navy);margin-bottom:4px}
+.t b{color:#fff}
+.t small{display:block;color:var(--dim);margin-top:4px;font-size:14px}
+
+.flow{display:grid;grid-template-columns:repeat(5,1fr);gap:14px;list-style:none}
+.flow li{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:22px 16px;text-align:center;position:relative}
+.flow li svg{width:72px;height:72px;margin:0 auto 10px;display:block}
+.flow .n{position:absolute;top:12px;left:14px;font-size:13px;font-weight:800;color:var(--orange)}
+.flow h3{font-size:16px;margin-bottom:4px}
 .flow p{font-size:14.5px;color:var(--muted)}
-.warn{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
-.warn div{background:#FFF8F3;border:1px solid #FBD9C3;border-radius:12px;padding:18px 20px;font-size:15.5px}
-.warn b{color:var(--orange-dark);display:block;margin-bottom:4px}
-.faq details{background:#fff;border:1px solid var(--line);border-radius:12px;padding:18px 22px;margin-bottom:10px}
-.faq summary{cursor:pointer;font-weight:700;color:var(--navy);font-size:16.5px;list-style:none;display:flex;justify-content:space-between;gap:12px}
+
+.tips{display:grid;grid-template-columns:240px 1fr;gap:28px;align-items:center}
+.warn{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.warn div{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px 20px;font-size:15.5px;color:var(--muted)}
+.warn b{display:block;color:var(--yellow);margin-bottom:4px}
+
+.faqwrap{display:grid;grid-template-columns:1fr 220px;gap:28px;align-items:start}
+.faq details{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px 22px;margin-bottom:10px}
+.faq summary{cursor:pointer;font-weight:700;font-size:16.5px;list-style:none;display:flex;justify-content:space-between;gap:12px}
+.faq summary::-webkit-details-marker{display:none}
 .faq summary::after{content:"+";color:var(--orange);font-size:22px;line-height:1}
 .faq details[open] summary::after{content:"−"}
 .faq p{margin-top:10px;color:var(--muted);font-size:15.5px}
-.cta-band{background:var(--navy);color:#fff;border-radius:20px;padding:40px;display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap}
-.cta-band h2{color:#fff;margin:0 0 6px}
-.cta-band p{color:#C9D3E3}
-.src{font-size:13px;color:#8A92A0;margin-top:18px}
+
+.cta-band{background:linear-gradient(120deg,#FF8A3D,#FF6A3D);color:#1A0E05;border-radius:22px;padding:40px;display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap}
+.cta-band h2{margin:0 0 6px;color:#1A0E05}
+.cta-band p{color:#4A2410;font-weight:500}
+.cta-band .btn-dark{background:#0B0C10;color:#fff}
+.cta-band .btn-ghost{border:1.5px solid #1A0E05;color:#1A0E05}
+.src{font-size:13px;color:var(--dim);margin-top:18px}
 .src a{text-decoration:underline}
+
+footer{background:#050608;color:var(--dim);padding:40px 0 110px;font-size:14px;border-top:1px solid var(--line)}
+footer b{color:#fff;font-size:16px;display:block;margin-bottom:8px}
+footer a{text-decoration:underline}
+.float{position:fixed;right:24px;bottom:24px;z-index:30;background:var(--orange);color:#1A0E05;font-weight:800;border-radius:999px;padding:16px 22px;box-shadow:0 8px 24px rgba(255,138,61,.35)}
+.mbar{display:none}
+
 @media (max-width:960px){
   nav{display:none}
-  .hero .wrap,.two{grid-template-columns:1fr}
+  .hero .wrap,.who,.support,.tips,.faqwrap{grid-template-columns:1fr}
   .hero h1{font-size:38px}
-  .flow{grid-template-columns:1fr;gap:14px}
-  .flow li{display:grid;grid-template-columns:52px 1fr;column-gap:14px;text-align:left;padding:0}
-  .flow li::before{margin:0;grid-row:span 2}
-  .flow li::after{top:52px;left:25px;width:2px;height:calc(100% - 38px)}
+  .flow{grid-template-columns:1fr 1fr}
+  .support .side,.faqwrap .side{max-width:220px;margin:0 auto}
+  .tips .side{max-width:200px;margin:0 auto}
 }
 @media (max-width:640px){
   .sec{padding:56px 0}
-  h2{font-size:24px}
-  .hero{padding:40px 0 52px}
-  .hero h1{font-size:30px}
+  h2{font-size:25px}
+  .hero{padding:36px 0 56px}
+  .hero h1{font-size:31px}
   .hero .btn{flex:1}
   .top-call{display:none}
-  .nums{grid-template-columns:1fr}
-  .warn{grid-template-columns:1fr}
+  .nums,.warn{grid-template-columns:1fr}
+  .person{grid-template-columns:90px 1fr;padding:18px}
+  .flow{grid-template-columns:1fr}
+  .flow li{display:grid;grid-template-columns:64px 1fr;gap:4px 14px;text-align:left;padding:18px}
+  .flow li svg{width:64px;height:64px;margin:0;grid-row:1 / span 3;grid-column:1}
+  .flow li > :not(svg){grid-column:2}
+  .flow .n{position:static}
   .t th{width:30%;padding:14px 12px}
   .t td{padding:14px 12px}
   .cta-band{padding:28px 22px}
   .float{display:none}
-  .mbar{display:grid;grid-template-columns:1fr 1.4fr;position:fixed;left:0;right:0;bottom:0;z-index:30;background:#fff;border-top:1px solid var(--line);padding:10px 12px calc(10px + env(safe-area-inset-bottom));gap:10px}
+  .mbar{display:grid;grid-template-columns:1fr 1.4fr;position:fixed;left:0;right:0;bottom:0;z-index:30;background:#0B0C10;border-top:1px solid var(--line);padding:10px 12px calc(10px + env(safe-area-inset-bottom));gap:10px}
   .mbar a{display:flex;align-items:center;justify-content:center;border-radius:12px;padding:14px;font-weight:800;font-size:16px}
-  .mbar .call{background:var(--bg-soft);color:var(--navy)}
-  .mbar .ask{background:var(--orange);color:#fff}
+  .mbar .call{background:var(--card);color:var(--text)}
+  .mbar .ask{background:var(--orange);color:#1A0E05}
 }
-footer{background:#121B2F;color:#AEB9CF;padding:40px 0 110px;font-size:14px}
-footer b{color:#fff;font-size:16px;display:block;margin-bottom:8px}
-.float{position:fixed;right:24px;bottom:24px;z-index:30;background:var(--orange);color:#fff;font-weight:800;border-radius:999px;padding:16px 22px;box-shadow:0 8px 24px rgba(242,107,29,.35)}
-.float:hover{background:var(--orange-dark)}
-.mbar{display:none}
 </style>
 </head>
 <body>
@@ -149,7 +161,7 @@ footer b{color:#fff;font-size:16px;display:block;margin-bottom:8px}
     <div class="wrap">
       <div>
         <p class="crumb"><a href="./">홈</a> › 내일배움카드란?</p>
-        <span class="badge">처음 오셨나요?</span>
+        <span class="badge">처음 오셨나요? 👋</span>
         <h1>국민내일배움카드,<br><em>한 번에 이해하기</em></h1>
         <p class="def">취업이나 업무에 필요한 교육·훈련비를 나라가 5년 동안 300만~500만 원까지 지원하는 카드예요.</p>
         <div class="btns">
@@ -157,59 +169,58 @@ footer b{color:#fff;font-size:16px;display:block;margin-bottom:8px}
           <a href="./#card" class="btn btn-line">발급 방법 보기</a>
         </div>
       </div>
-      <svg class="ill" viewBox="0 0 480 400" role="img" aria-label="국민내일배움카드와 신청서, 고용센터를 나타낸 일러스트">
-<rect width="480" height="400" rx="20" fill="#F1F4F9"/>
-<g fill="#D5DCE8"><circle cx="40" cy="40" r="2"/><circle cx="60" cy="40" r="2"/><circle cx="80" cy="40" r="2"/><circle cx="40" cy="60" r="2"/><circle cx="60" cy="60" r="2"/><circle cx="80" cy="60" r="2"/><circle cx="40" cy="80" r="2"/><circle cx="60" cy="80" r="2"/><circle cx="80" cy="80" r="2"/><circle cx="400" cy="330" r="2"/><circle cx="420" cy="330" r="2"/><circle cx="440" cy="330" r="2"/><circle cx="400" cy="350" r="2"/><circle cx="420" cy="350" r="2"/><circle cx="440" cy="350" r="2"/></g>
-<g transform="translate(64 96)">
-<rect x="0" y="0" width="200" height="250" rx="10" fill="#fff" stroke="#C5CEDC" stroke-width="2"/>
-<rect x="0" y="0" width="200" height="44" rx="10" fill="#1B2A4A"/>
-<rect x="0" y="30" width="200" height="14" fill="#1B2A4A"/>
-<rect x="20" y="17" width="96" height="10" rx="2" fill="#fff"/>
-<rect x="20" y="66" width="60" height="7" rx="2" fill="#8A97AD"/>
-<rect x="20" y="80" width="160" height="22" rx="3" fill="none" stroke="#C5CEDC" stroke-width="2"/>
-<rect x="20" y="114" width="60" height="7" rx="2" fill="#8A97AD"/>
-<rect x="20" y="128" width="160" height="22" rx="3" fill="none" stroke="#C5CEDC" stroke-width="2"/>
-<rect x="20" y="166" width="14" height="14" rx="2" fill="#1B2A4A"/>
-<path d="M23 173l3 3 6-6" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
-<rect x="42" y="169" width="90" height="7" rx="2" fill="#8A97AD"/>
-<rect x="20" y="190" width="14" height="14" rx="2" fill="#1B2A4A"/>
-<path d="M23 197l3 3 6-6" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
-<rect x="42" y="193" width="70" height="7" rx="2" fill="#8A97AD"/>
-<circle cx="48" cy="226" r="18" fill="none" stroke="#D4560E" stroke-width="3"/>
-<circle cx="48" cy="226" r="12" fill="none" stroke="#D4560E" stroke-width="1.5"/>
-<path d="M41 226l5 5 9-10" fill="none" stroke="#D4560E" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-</g>
-<g transform="translate(206 168) rotate(-8)">
-<rect width="216" height="136" rx="14" fill="#1B2A4A"/>
-<rect width="216" height="136" rx="14" fill="none" stroke="#2C3F66" stroke-width="2"/>
-<path d="M0 98h216v24a14 14 0 0 1-14 14H14A14 14 0 0 1 0 122z" fill="#F26B1D"/>
-<rect x="20" y="22" width="34" height="26" rx="4" fill="#E9C77B"/>
-<path d="M20 35h34M37 22v26" stroke="#C9A65A" stroke-width="1.5"/>
-<rect x="20" y="62" width="120" height="8" rx="2" fill="#fff" opacity=".9"/>
-<rect x="20" y="78" width="80" height="6" rx="2" fill="#8A97AD"/>
-<path d="M176 26l4 8 9 1-7 6 2 9-8-5-8 5 2-9-7-6 9-1z" fill="none" stroke="#fff" stroke-width="2" stroke-linejoin="round" opacity=".75"/>
-<rect x="20" y="110" width="60" height="6" rx="2" fill="#fff"/>
-</g>
-<g transform="translate(346 28)">
-<path d="M0 34L48 8l48 26z" fill="#1B2A4A"/>
-<rect x="4" y="34" width="88" height="8" fill="#2C3F66"/>
-<rect x="12" y="46" width="8" height="40" fill="#8A97AD"/><rect x="30" y="46" width="8" height="40" fill="#8A97AD"/><rect x="58" y="46" width="8" height="40" fill="#8A97AD"/><rect x="76" y="46" width="8" height="40" fill="#8A97AD"/>
-<rect x="0" y="86" width="96" height="10" fill="#2C3F66"/>
-<circle cx="48" cy="24" r="4" fill="#F26B1D"/>
-</g>
-</svg>
+      <svg class="ill" viewBox="0 0 480 420" role="img" aria-label="내일배움카드를 들고 웃는 학습자 일러스트">
+        <circle cx="250" cy="215" r="170" fill="#1C1F28"/>
+        <circle cx="250" cy="215" r="130" fill="#232733"/>
+        <g fill="#FFD166"><path d="M88 96l5 12 12 5-12 5-5 12-5-12-12-5 12-5z"/><path d="M408 300l4 9 9 4-9 4-4 9-4-9-9-4 9-4z"/><circle cx="410" cy="110" r="5"/><circle cx="70" cy="300" r="4"/></g>
+        <rect x="120" y="318" width="260" height="14" rx="7" fill="#3A4050"/>
+        <path d="M158 250h150a8 8 0 0 1 8 8v60H150v-60a8 8 0 0 1 8-8z" fill="#3A4050"/>
+        <rect x="160" y="258" width="146" height="54" rx="4" fill="#7DB7FF"/>
+        <path d="M222 272v26l20-13z" fill="#fff"/>
+        <path d="M188 180c0-34 26-56 56-56s56 22 56 56v20h-112z" fill="#3B2A22"/>
+        <circle cx="244" cy="176" r="40" fill="#FFCFA8"/>
+        <path d="M204 168c4-28 24-44 46-42 22 2 36 18 38 38-20-2-42-12-54-28-8 16-18 26-30 32z" fill="#3B2A22"/>
+        <path d="M229 172q4-5 8 0M251 172q4-5 8 0" fill="none" stroke="#3B2A22" stroke-width="3.2" stroke-linecap="round"/>
+        <path d="M232 188q12 12 24 0" fill="#C2410C" stroke="#3B2A22" stroke-width="2.5" stroke-linejoin="round"/>
+        <circle cx="222" cy="186" r="6" fill="#FF9E86" opacity=".7"/><circle cx="266" cy="186" r="6" fill="#FF9E86" opacity=".7"/>
+        <path d="M188 318c0-56 26-88 56-88s56 32 56 88z" fill="#FF8A3D"/>
+        <path d="M228 232l16 18 16-18" fill="#FFF3E8"/>
+        <g transform="translate(300 190) rotate(14)">
+          <rect width="120" height="76" rx="12" fill="#FFD166"/>
+          <rect x="14" y="16" width="24" height="18" rx="3" fill="#E0A82E"/>
+          <rect x="14" y="46" width="66" height="7" rx="3.5" fill="#B9861F"/>
+          <rect x="14" y="58" width="40" height="6" rx="3" fill="#D79F2A"/>
+          <circle cx="98" cy="24" r="10" fill="#fff" opacity=".8"/>
+        </g>
+        <path d="M282 252c14-18 26-30 34-28 8 4 6 16-8 34z" fill="#FFCFA8"/>
+        <circle cx="314" cy="232" r="11" fill="#FFCFA8"/>
+        <g transform="translate(96 66)">
+          <rect width="124" height="46" rx="16" fill="#fff"/>
+          <path d="M84 46l10 14 4-14z" fill="#fff"/>
+          <text x="62" y="30" text-anchor="middle" font-family="Pretendard,sans-serif" font-size="16" font-weight="800" fill="#1A0E05">나도 받을까?</text>
+        </g>
+      </svg>
     </div>
   </section>
 
-  <section class="sec soft">
+  <section class="sec alt">
     <div class="wrap">
       <span class="eyebrow">숫자로 보기</span>
       <h2>꼭 기억할 숫자 3가지</h2>
       <p class="lead">카드 한 장으로 5년 동안 여러 과정을 들을 수 있어요.</p>
       <div class="nums">
-        <div class="num"><b><em>300</em>만 원</b><span>기본 지원 금액</span></div>
-        <div class="num"><b>최대 <em>500</em>만 원</b><span>조건에 맞으면 200만 원 추가</span></div>
-        <div class="num"><b><em>5</em>년</b><span>카드 유효기간 (지나면 잔액 소멸)</span></div>
+        <div class="num">
+          <svg viewBox="0 0 84 84" aria-hidden="true"><circle cx="42" cy="42" r="40" fill="#2A1A10"/><ellipse cx="42" cy="58" rx="20" ry="6" fill="#E0A82E"/><rect x="22" y="44" width="40" height="14" fill="#FFD166"/><ellipse cx="42" cy="44" rx="20" ry="6" fill="#FFE29A"/><rect x="22" y="32" width="40" height="12" fill="#FFD166"/><ellipse cx="42" cy="32" rx="20" ry="6" fill="#FFE29A"/><text x="42" y="36" text-anchor="middle" font-size="9" font-weight="800" fill="#B9861F" font-family="sans-serif">₩</text></svg>
+          <b><em>300</em>만 원</b><span>기본 지원 금액</span>
+        </div>
+        <div class="num">
+          <svg viewBox="0 0 84 84" aria-hidden="true"><circle cx="42" cy="42" r="40" fill="#1E2A24"/><rect x="20" y="38" width="44" height="28" rx="4" fill="#5FD3B3"/><rect x="16" y="28" width="52" height="12" rx="3" fill="#7FE3C8"/><rect x="38" y="28" width="8" height="38" fill="#FF8A3D"/><path d="M42 28c-10-14-22-6-14 0zM42 28c10-14 22-6 14 0z" fill="#FF8A3D"/></svg>
+          <b>최대 <em>500</em>만 원</b><span>조건에 맞으면 200만 원 추가</span>
+        </div>
+        <div class="num">
+          <svg viewBox="0 0 84 84" aria-hidden="true"><circle cx="42" cy="42" r="40" fill="#1A2233"/><rect x="18" y="22" width="48" height="44" rx="6" fill="#fff"/><rect x="18" y="22" width="48" height="12" rx="6" fill="#7DB7FF"/><rect x="18" y="30" width="48" height="4" fill="#7DB7FF"/><rect x="28" y="16" width="5" height="12" rx="2.5" fill="#3A4050"/><rect x="51" y="16" width="5" height="12" rx="2.5" fill="#3A4050"/><text x="42" y="58" text-anchor="middle" font-size="18" font-weight="800" fill="#1A2233" font-family="sans-serif">5</text></svg>
+          <b><em>5</em>년</b><span>카드 유효기간 (지나면 잔액 소멸)</span>
+        </div>
       </div>
     </div>
   </section>
@@ -219,44 +230,80 @@ footer b{color:#fff;font-size:16px;display:block;margin-bottom:8px}
       <span class="eyebrow">발급 대상</span>
       <h2>누가 받을 수 있나요?</h2>
       <p class="lead">업무 능력을 키우고 싶은 사람이면 원칙적으로 누구나 신청할 수 있어요. 일하는 중이어도, 쉬고 있어도 괜찮아요.</p>
-      <div class="two">
-        <div class="box ok">
-          <h3><i>✓</i>이런 분들이 많이 받아요</h3>
-          <ul>
-            <li>회사에 다니며 실력을 키우고 싶은 재직자</li>
-            <li>일을 쉬면서 취업을 준비하는 구직자</li>
-            <li>자영업자, 특수형태근로종사자 (일부 조건 있음)</li>
-          </ul>
-          <p style="margin-top:12px">기간제·파견·단시간·일용 근로자, 기초생활수급자·차상위계층, 장애인, 한부모가족 등은 <b>200만 원을 1회 더</b> 받을 수 있어요.</p>
+      <div class="who">
+        <div class="person">
+          <svg class="ill" viewBox="0 0 120 120" aria-label="출근하는 직장인 일러스트" role="img">
+            <circle cx="60" cy="60" r="58" fill="#1A2233"/>
+            <path d="M28 120c0-30 14-46 32-46s32 16 32 46z" fill="#7DB7FF"/>
+            <path d="M54 74l6 30 6-30z" fill="#FF8A3D"/>
+            <path d="M48 74l12 10 12-10" fill="#fff"/>
+            <circle cx="60" cy="50" r="20" fill="#FFCFA8"/>
+            <path d="M40 46c2-16 14-22 24-20 10 2 16 10 16 18-12 0-26-4-40 2z" fill="#2B2B33"/>
+            <circle cx="53" cy="52" r="2.5" fill="#2B2B33"/><circle cx="67" cy="52" r="2.5" fill="#2B2B33"/>
+            <path d="M54 60q6 6 12 0" fill="none" stroke="#2B2B33" stroke-width="2.4" stroke-linecap="round"/>
+            <rect x="80" y="86" width="26" height="20" rx="3" fill="#3A4050"/><path d="M87 86v-4h12v4" fill="none" stroke="#3A4050" stroke-width="3"/>
+          </svg>
+          <div><h3>회사에 다니는 재직자</h3><p>일하면서 실력을 키우고 싶을 때. 퇴근 후 온라인 강의도 들을 수 있어요.</p></div>
         </div>
-        <div class="box no">
-          <h3><i>✕</i>이런 경우는 받을 수 없어요</h3>
-          <ul>
-            <li>공무원, 사립학교 교직원</li>
-            <li>75세 이상</li>
-            <li>대규모 기업 근로자 중 월 임금 300만 원 이상이면서 만 45세 미만</li>
-            <li>월 소득 500만 원 이상 특수형태근로종사자</li>
-            <li>사업 기간 1년 미만이거나 연 매출 4억 원 이상인 자영업자 등</li>
-            <li>졸업까지 2년 이상 남은 대학(원)생, 고등학교 1~2학년</li>
-            <li>생계급여 수급자(조건부 수급자 등은 가능)</li>
-            <li>다른 기관에서 같은 훈련비를 지원받는 사람 등</li>
-          </ul>
+        <div class="person">
+          <svg class="ill" viewBox="0 0 120 120" aria-label="취업을 준비하는 구직자 일러스트" role="img">
+            <circle cx="60" cy="60" r="58" fill="#2A1A10"/>
+            <path d="M28 120c0-30 14-46 32-46s32 16 32 46z" fill="#FF8A3D"/>
+            <rect x="36" y="80" width="8" height="30" rx="4" fill="#B5531A"/>
+            <circle cx="60" cy="50" r="20" fill="#FFCFA8"/>
+            <path d="M40 52c-2-20 10-30 22-30 12 0 20 10 18 26l-4 14c0-12-2-20-6-24-10 4-20 6-30 14z" fill="#5A3A2A"/>
+            <circle cx="53" cy="52" r="2.5" fill="#2B2B33"/><circle cx="67" cy="52" r="2.5" fill="#2B2B33"/>
+            <path d="M54 60q6 6 12 0" fill="none" stroke="#2B2B33" stroke-width="2.4" stroke-linecap="round"/>
+            <g transform="translate(76 76) rotate(10)"><rect width="26" height="32" rx="3" fill="#fff"/><rect x="5" y="6" width="9" height="9" rx="2" fill="#7DB7FF"/><rect x="5" y="19" width="16" height="3" rx="1.5" fill="#C5CEDC"/><rect x="5" y="25" width="12" height="3" rx="1.5" fill="#C5CEDC"/></g>
+          </svg>
+          <div><h3>취업을 준비하는 구직자</h3><p>새 일을 찾고 있을 때. 실업 상태라면 고용24에 구직 신청부터 해요.</p></div>
         </div>
       </div>
+      <p class="plus">🎁 기간제·파견·단시간·일용 근로자, 기초생활수급자·차상위계층, 장애인, 한부모가족 등은 <b>200만 원을 1회 더</b> 받을 수 있어요. 자영업자·특수형태근로종사자도 일부 조건에 맞으면 신청할 수 있어요.</p>
+      <details class="no">
+        <summary>이런 경우는 받을 수 없어요 (눌러서 보기)</summary>
+        <ul>
+          <li>공무원, 사립학교 교직원</li>
+          <li>75세 이상</li>
+          <li>대규모 기업 근로자 중 월 임금 300만 원 이상이면서 만 45세 미만</li>
+          <li>월 소득 500만 원 이상 특수형태근로종사자</li>
+          <li>사업 기간 1년 미만이거나 연 매출 4억 원 이상인 자영업자 등</li>
+          <li>졸업까지 2년 이상 남은 대학(원)생, 고등학교 1~2학년</li>
+          <li>생계급여 수급자(조건부 수급자 등은 가능)</li>
+          <li>다른 기관에서 같은 훈련비를 지원받는 사람 등</li>
+        </ul>
+      </details>
     </div>
   </section>
 
-  <section class="sec soft" id="support">
+  <section class="sec alt" id="support">
     <div class="wrap">
       <span class="eyebrow">지원 내용</span>
       <h2>무엇을 지원받나요?</h2>
-      <p class="lead">교육비 대부분을 나라가 내 주고, 오래 듣는 과정은 생활비 성격의 장려금도 있어요.</p>
-      <table class="t">
-        <tr><th>훈련비</th><td>5년 동안 <b>300만 원</b>까지 사용<small>조건에 맞으면 200만 원 추가 (총 최대 500만 원)</small></td></tr>
-        <tr><th>본인 부담</th><td>과정과 대상에 따라 수강료의 <b>0~55%</b>를 본인이 내요<small>보통 15~55%. 본인 부담금도 이 카드로 결제해요.</small></td></tr>
-        <tr><th>훈련장려금</th><td>하루 훈련 5시간 이상이면 <b>하루 5,800원 (월 최대 116,000원)</b><br>5시간 미만이면 하루 2,500원 (월 최대 50,000원)<small>실업 상태이거나 주 15시간 미만 근로하는 분 등 대상. 한 달 출석률 80% 미만이면 받을 수 없어요. 신청 없이 등록한 계좌로 들어와요.</small></td></tr>
-        <tr><th>사용 기간</th><td>카드 유효기간 <b>5년</b><small>5년이 지나면 남은 금액은 사라지고, 다시 발급받아야 해요.</small></td></tr>
-      </table>
+      <p class="lead">교육비 대부분을 나라가 내 주고, 오래 듣는 과정은 생활비에 보탬이 되는 장려금도 있어요.</p>
+      <div class="support">
+        <table class="t">
+          <tr><th>훈련비</th><td>5년 동안 <b>300만 원</b>까지 사용<small>조건에 맞으면 200만 원 추가 (총 최대 500만 원)</small></td></tr>
+          <tr><th>본인 부담</th><td>과정과 대상에 따라 수강료의 <b>0~55%</b>를 본인이 내요<small>보통 15~55%. 본인 부담금도 이 카드로 결제해요.</small></td></tr>
+          <tr><th>훈련장려금</th><td>하루 훈련 5시간 이상이면 <b>하루 5,800원 (월 최대 116,000원)</b><br>5시간 미만이면 하루 2,500원 (월 최대 50,000원)<small>실업 상태이거나 주 15시간 미만 근로하는 분 등 대상. 한 달 출석률 80% 미만이면 받을 수 없어요. 신청 없이 등록한 계좌로 들어와요.</small></td></tr>
+          <tr><th>사용 기간</th><td>카드 유효기간 <b>5년</b><small>5년이 지나면 남은 금액은 사라지고, 다시 발급받아야 해요.</small></td></tr>
+        </table>
+        <div class="side">
+          <svg class="ill" viewBox="0 0 260 240" role="img" aria-label="동전이 들어가는 저금통 일러스트">
+            <circle cx="130" cy="130" r="104" fill="#1C1F28"/>
+            <ellipse cx="130" cy="214" rx="70" ry="8" fill="#0B0C10" opacity=".6"/>
+            <ellipse cx="128" cy="150" rx="78" ry="58" fill="#FF9EB5"/>
+            <circle cx="206" cy="146" r="18" fill="#FF9EB5"/><ellipse cx="212" cy="146" rx="9" ry="11" fill="#F57A9A"/><circle cx="209" cy="143" r="2" fill="#7A2A40"/><circle cx="215" cy="149" r="2" fill="#7A2A40"/>
+            <path d="M150 98l14-18 6 24z" fill="#F57A9A"/>
+            <circle cx="168" cy="132" r="4.5" fill="#3B1A26"/>
+            <path d="M104 98h40" stroke="#C2557A" stroke-width="6" stroke-linecap="round"/>
+            <rect x="82" y="196" width="16" height="16" rx="4" fill="#F57A9A"/><rect x="152" y="196" width="16" height="16" rx="4" fill="#F57A9A"/>
+            <path d="M52 140c-14-4-18 10-8 14" fill="none" stroke="#F57A9A" stroke-width="5" stroke-linecap="round"/>
+            <g><circle cx="124" cy="56" r="20" fill="#FFD166"/><circle cx="124" cy="56" r="14" fill="none" stroke="#E0A82E" stroke-width="3"/><text x="124" y="62" text-anchor="middle" font-size="16" font-weight="800" fill="#B9861F" font-family="sans-serif">₩</text></g>
+            <g fill="#FFD166"><path d="M60 60l4 9 9 4-9 4-4 9-4-9-9-4 9-4z"/><circle cx="200" cy="70" r="5"/></g>
+          </svg>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -266,25 +313,55 @@ footer b{color:#fff;font-size:16px;display:block;margin-bottom:8px}
       <h2>발급부터 수료까지</h2>
       <p class="lead">고용24 누리집(PC·휴대폰) 또는 가까운 고용센터에서 진행해요.</p>
       <ol class="flow">
-        <li><h3>카드 발급 신청</h3><p>고용24 또는 고용센터. 실업자는 구직 신청 먼저</p></li>
-        <li><h3>심사 후 카드 받기</h3><p>우편 또는 은행에서 실물 카드 수령</p></li>
-        <li><h3>과정 고르기</h3><p>140시간 이상 긴 과정은 진단·상담 먼저</p></li>
-        <li><h3>카드로 결제·수강</h3><p>출석률을 잘 챙기며 수업 듣기</p></li>
-        <li><h3>만족도 조사</h3><p>수업이 끝나고 30일 안에 고용24에서 참여</p></li>
+        <li>
+          <svg viewBox="0 0 72 72" aria-hidden="true"><circle cx="36" cy="36" r="34" fill="#1A2233"/><rect x="18" y="14" width="30" height="40" rx="4" fill="#fff"/><rect x="23" y="22" width="20" height="4" rx="2" fill="#7DB7FF"/><rect x="23" y="31" width="16" height="3" rx="1.5" fill="#C5CEDC"/><rect x="23" y="38" width="18" height="3" rx="1.5" fill="#C5CEDC"/><path d="M44 50l14-14 6 6-14 14h-6z" fill="#FF8A3D"/></svg>
+          <span class="n">STEP 1</span><h3>카드 발급 신청</h3><p>고용24 또는 고용센터. 실업자는 구직 신청 먼저</p>
+        </li>
+        <li>
+          <svg viewBox="0 0 72 72" aria-hidden="true"><circle cx="36" cy="36" r="34" fill="#2A1A10"/><rect x="12" y="24" width="48" height="32" rx="4" fill="#FF8A3D"/><path d="M12 28l24 16 24-16" fill="none" stroke="#FFF3E8" stroke-width="3"/><rect x="40" y="12" width="24" height="16" rx="3" fill="#FFD166" transform="rotate(12 52 20)"/></svg>
+          <span class="n">STEP 2</span><h3>심사 후 카드 받기</h3><p>우편 또는 은행에서 실물 카드 수령</p>
+        </li>
+        <li>
+          <svg viewBox="0 0 72 72" aria-hidden="true"><circle cx="36" cy="36" r="34" fill="#1E2A24"/><rect x="14" y="18" width="14" height="36" rx="2" fill="#5FD3B3"/><rect x="30" y="22" width="12" height="32" rx="2" fill="#7DB7FF"/><rect x="44" y="16" width="14" height="38" rx="2" fill="#FFD166" transform="rotate(8 51 35)"/><rect x="10" y="54" width="52" height="4" rx="2" fill="#3A4050"/></svg>
+          <span class="n">STEP 3</span><h3>과정 고르기</h3><p>140시간 이상 긴 과정은 진단·상담 먼저</p>
+        </li>
+        <li>
+          <svg viewBox="0 0 72 72" aria-hidden="true"><circle cx="36" cy="36" r="34" fill="#1A2233"/><rect x="14" y="18" width="44" height="28" rx="3" fill="#3A4050"/><rect x="17" y="21" width="38" height="22" fill="#7DB7FF"/><path d="M32 26v12l10-6z" fill="#fff"/><path d="M8 48h56l-4 6H12z" fill="#AAB2C0"/></svg>
+          <span class="n">STEP 4</span><h3>카드로 결제·수강</h3><p>출석률을 잘 챙기며 수업 듣기</p>
+        </li>
+        <li>
+          <svg viewBox="0 0 72 72" aria-hidden="true"><circle cx="36" cy="36" r="34" fill="#2A2410"/><path d="M36 12l7 15 16 2-12 11 3 16-14-8-14 8 3-16-12-11 16-2z" fill="#FFD166"/><path d="M29 36l5 5 9-10" fill="none" stroke="#B9861F" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <span class="n">STEP 5</span><h3>만족도 조사</h3><p>수업이 끝나고 30일 안에 고용24에서 참여</p>
+        </li>
       </ol>
     </div>
   </section>
 
-  <section class="sec soft">
+  <section class="sec alt">
     <div class="wrap">
       <span class="eyebrow">꼭 알아두세요</span>
       <h2>놓치기 쉬운 주의사항</h2>
       <p class="lead">몰라서 손해 보는 일이 없도록 미리 확인하세요.</p>
-      <div class="warn">
-        <div><b>중간에 그만두면 한도가 줄어요</b>병·사고 같은 어쩔 수 없는 이유 없이 그만두면 1회 20만 원, 2회 50만 원, 3회 100만 원이 줄어요.</div>
-        <div><b>만족도 조사를 꼭 하세요</b>훈련이 끝나고 30일 안에 하지 않으면 마지막 달 장려금을 받을 수 없어요.</div>
-        <div><b>출석률 80%를 지키세요</b>한 달 출석률이 80%보다 낮으면 장려금이 나오지 않고, 훈련이 중단될 수 있어요.</div>
-        <div><b>부정한 방법은 큰 손해</b>거짓으로 지원받으면 지급이 멈추고, 받은 돈의 최대 5배를 돌려줘야 해요.</div>
+      <div class="tips">
+        <div class="side">
+          <svg class="ill" viewBox="0 0 240 240" role="img" aria-label="전구를 들고 팁을 알려주는 캐릭터 일러스트">
+            <circle cx="120" cy="128" r="100" fill="#1C1F28"/>
+            <g transform="translate(150 22)"><circle cx="30" cy="30" r="24" fill="#FFD166"/><rect x="20" y="52" width="20" height="12" rx="3" fill="#AAB2C0"/><path d="M22 32l8-8 8 8M30 24v18" fill="none" stroke="#B9861F" stroke-width="3" stroke-linecap="round"/><g stroke="#FFD166" stroke-width="3" stroke-linecap="round"><path d="M30 0v-0"/><path d="M-2 30h-6"/><path d="M62 30h6"/><path d="M8 8l-5-5"/><path d="M52 8l5-5"/></g></g>
+            <path d="M60 232c0-52 28-80 60-80s60 28 60 80z" fill="#5FD3B3"/>
+            <path d="M160 176l22-62" stroke="#FFCFA8" stroke-width="14" stroke-linecap="round"/>
+            <circle cx="120" cy="116" r="38" fill="#FFCFA8"/>
+            <path d="M82 112c2-30 22-44 42-42 18 2 32 16 32 36-14-2-30-8-40-20-8 14-20 22-34 26z" fill="#2B2B33"/>
+            <circle cx="106" cy="120" r="4" fill="#2B2B33"/><circle cx="134" cy="120" r="4" fill="#2B2B33"/>
+            <path d="M108 134q12 12 24 0" fill="#C2410C" stroke="#2B2B33" stroke-width="2.5" stroke-linejoin="round"/>
+            <circle cx="94" cy="132" r="6" fill="#FF9E86" opacity=".7"/><circle cx="146" cy="132" r="6" fill="#FF9E86" opacity=".7"/>
+          </svg>
+        </div>
+        <div class="warn">
+          <div><b>중간에 그만두면 한도가 줄어요</b>병·사고 같은 어쩔 수 없는 이유 없이 그만두면 1회 20만 원, 2회 50만 원, 3회 100만 원이 줄어요.</div>
+          <div><b>만족도 조사를 꼭 하세요</b>훈련이 끝나고 30일 안에 하지 않으면 마지막 달 장려금을 받을 수 없어요.</div>
+          <div><b>출석률 80%를 지키세요</b>한 달 출석률이 80%보다 낮으면 장려금이 나오지 않고, 훈련이 중단될 수 있어요.</div>
+          <div><b>부정한 방법은 큰 손해</b>거짓으로 지원받으면 지급이 멈추고, 받은 돈의 최대 5배를 돌려줘야 해요.</div>
+        </div>
       </div>
     </div>
   </section>
@@ -294,11 +371,28 @@ footer b{color:#fff;font-size:16px;display:block;margin-bottom:8px}
       <span class="eyebrow">자주 묻는 질문</span>
       <h2>궁금한 점을 모았어요</h2>
       <p class="lead">더 궁금한 점은 상담 신청을 남겨 주세요.</p>
-      <details><summary>회사에 다니고 있어도 받을 수 있나요?</summary><p>네. 업무 능력을 키우려는 사람은 원칙적으로 누구나 신청할 수 있어요. 다만 대규모 기업에 다니며 월 임금 300만 원 이상이고 만 45세 미만인 경우 등은 제외돼요.</p></details>
-      <details><summary>준비할 서류가 있나요?</summary><p>대부분은 필요 없어요. 자영업자나 특수형태근로종사자 등 일부만 서류를 내야 할 수 있고, 200만 원 추가 지원을 받으려면 대상임을 보여 주는 서류를 들고 고용센터를 방문해야 해요.</p></details>
-      <details><summary>카드는 어디서 받나요?</summary><p>심사가 끝나면 우편이나 은행 방문 중 골라서 받아요. 은행에서 받을 땐 고용센터가 발급한 '국민내일배움카드 발급 확인서'와 신분증이 필요해요.</p></details>
-      <details><summary>5년이 지나면 어떻게 되나요?</summary><p>남은 금액은 사라져요. 계속 교육이 필요하면 카드를 다시 발급받아야 해요.</p></details>
-      <details><summary>실업급여를 받는 중에도 장려금이 나오나요?</summary><p>실업급여를 받는 중이거나 수당을 받는 일자리 사업에 참여 중이면 훈련장려금이 나오지 않을 수 있어요.</p></details>
+      <div class="faqwrap">
+        <div>
+          <details><summary>회사에 다니고 있어도 받을 수 있나요?</summary><p>네. 업무 능력을 키우려는 사람은 원칙적으로 누구나 신청할 수 있어요. 다만 대규모 기업에 다니며 월 임금 300만 원 이상이고 만 45세 미만인 경우 등은 제외돼요.</p></details>
+          <details><summary>준비할 서류가 있나요?</summary><p>대부분은 필요 없어요. 자영업자나 특수형태근로종사자 등 일부만 서류를 내야 할 수 있고, 200만 원 추가 지원을 받으려면 대상임을 보여 주는 서류를 들고 고용센터를 방문해야 해요.</p></details>
+          <details><summary>카드는 어디서 받나요?</summary><p>심사가 끝나면 우편이나 은행 방문 중 골라서 받아요. 은행에서 받을 땐 고용센터가 발급한 '국민내일배움카드 발급 확인서'와 신분증이 필요해요.</p></details>
+          <details><summary>5년이 지나면 어떻게 되나요?</summary><p>남은 금액은 사라져요. 계속 교육이 필요하면 카드를 다시 발급받아야 해요.</p></details>
+          <details><summary>실업급여를 받는 중에도 장려금이 나오나요?</summary><p>실업급여를 받는 중이거나 수당을 받는 일자리 사업에 참여 중이면 훈련장려금이 나오지 않을 수 있어요.</p></details>
+        </div>
+        <div class="side">
+          <svg class="ill" viewBox="0 0 220 240" role="img" aria-label="물음표 말풍선을 띄운 학습자 일러스트">
+            <circle cx="110" cy="134" r="96" fill="#1C1F28"/>
+            <g transform="translate(118 10)"><rect width="76" height="60" rx="18" fill="#FF8A3D"/><path d="M18 60l-4 16 18-16z" fill="#FF8A3D"/><text x="38" y="45" text-anchor="middle" font-size="40" font-weight="900" fill="#1A0E05" font-family="sans-serif">?</text></g>
+            <path d="M50 240c0-52 28-78 60-78s60 26 60 78z" fill="#7DB7FF"/>
+            <circle cx="110" cy="124" r="38" fill="#FFCFA8"/>
+            <path d="M70 132c-4-34 16-54 40-54 26 0 42 20 38 50l-6 22c0-20-4-32-10-38-16 6-34 8-56 20z" fill="#5A3A2A"/>
+            <circle cx="96" cy="128" r="4" fill="#2B2B33"/><circle cx="124" cy="128" r="4" fill="#2B2B33"/>
+            <ellipse cx="110" cy="144" rx="6" ry="5" fill="#C2410C"/>
+            <circle cx="84" cy="140" r="6" fill="#FF9E86" opacity=".7"/><circle cx="136" cy="140" r="6" fill="#FF9E86" opacity=".7"/>
+            <path d="M150 196c10-14 16-30 10-40" stroke="#FFCFA8" stroke-width="12" stroke-linecap="round" fill="none"/>
+          </svg>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -307,8 +401,8 @@ footer b{color:#fff;font-size:16px;display:block;margin-bottom:8px}
       <div class="cta-band">
         <div><h2>어떤 과정이 맞을지 고민되세요?</h2><p>발급 방법부터 과정 선택까지 무료로 안내해 드려요.</p></div>
         <div style="display:flex;gap:10px;flex-wrap:wrap">
-          <a class="btn btn-main" href="./#apply">무료 상담 신청</a>
-          <a class="btn btn-line" href="https://www.work24.go.kr" target="_blank" rel="noopener">고용24 바로가기</a>
+          <a class="btn btn-dark" href="./#apply">무료 상담 신청</a>
+          <a class="btn btn-ghost" href="https://www.work24.go.kr" target="_blank" rel="noopener">고용24 바로가기</a>
         </div>
       </div>
       <p class="src">출처: <a href="https://www.work24.go.kr/cm/c/f/1100/selecSystInfo.do?systId=SI00000351" target="_blank" rel="noopener">고용24 국민내일배움카드 제도 안내</a> (2026년 10월 확인). 조건과 금액은 바뀔 수 있으니 고용24 또는 고용노동부 상담센터(국번 없이 1350)에서 꼭 확인하세요.</p>
@@ -319,7 +413,7 @@ footer b{color:#fff;font-size:16px;display:block;margin-bottom:8px}
 <footer>
   <div class="wrap">
     <b>내일배움카드교육 신청</b>
-    이메일 peech1996@gmail.com · <a href="./" style="text-decoration:underline">홈으로</a><br>
+    이메일 peech1996@gmail.com · <a href="./">홈으로</a><br>
     주소 <span>(입력 필요)</span> · 사업자등록번호 <span>(입력 필요)</span>
   </div>
 </footer>
