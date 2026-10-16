@@ -67,6 +67,24 @@ nav a:hover{color:var(--navy)}
 .stamp{display:none;font-weight:800;color:var(--orange)}
 .steps.finish .stamp{display:inline}
 
+/* 카드 발급 방법 */
+.issue{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;counter-reset:is;list-style:none}
+.issue li{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:20px 16px;position:relative}
+.issue li::before{counter-increment:is;content:counter(is);display:inline-flex;width:32px;height:32px;border-radius:50%;background:var(--navy);color:#fff;font-weight:800;align-items:center;justify-content:center;margin-bottom:10px}
+.issue h3{font-size:17px;color:var(--navy);margin-bottom:6px}
+.issue p{font-size:15px;color:var(--muted);line-height:1.6}
+.issue .opt{display:inline-block;font-size:12px;font-weight:700;color:var(--orange-dark);background:#FFF1E8;border-radius:6px;padding:2px 8px;margin-left:4px;vertical-align:middle}
+.card-info{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:20px}
+.card-info div{background:var(--bg-soft);border-radius:var(--radius);padding:20px}
+.card-info b{display:block;color:var(--navy);margin-bottom:6px}
+.card-info p{font-size:15px;color:var(--muted)}
+.card-info strong{color:var(--orange-dark)}
+details.ex{margin-top:12px;border:1px solid var(--line);border-radius:var(--radius);padding:16px 20px;background:#fff}
+details.ex summary{cursor:pointer;font-weight:700;color:var(--navy)}
+details.ex ul{margin:12px 0 0 18px;color:var(--muted);font-size:15px;display:grid;gap:4px}
+.card-cta{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;margin-top:20px}
+.src{font-size:13px;color:#8A92A0}
+
 /* 맞춤 찾기 */
 .finder{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
 .q{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:24px}
@@ -138,6 +156,8 @@ footer b{color:#fff;font-size:16px;display:block;margin-bottom:8px}
   .hero .wrap,.teacher,.form-box{grid-template-columns:1fr}
   .hero h1{font-size:38px}
   .finder{grid-template-columns:1fr}
+  .issue{grid-template-columns:1fr 1fr}
+  .card-info{grid-template-columns:1fr}
   .cards{grid-template-columns:1fr 1fr}
   .teacher .ph{aspect-ratio:16/10}
 }
@@ -154,6 +174,9 @@ footer b{color:#fff;font-size:16px;display:block;margin-bottom:8px}
   .steps{padding:20px}
   .step-btns{grid-template-columns:1fr 1fr}
   .cards{grid-template-columns:1fr}
+  .issue{grid-template-columns:1fr}
+  .issue li{display:grid;grid-template-columns:32px 1fr;column-gap:12px;padding:16px}
+  .issue li::before{margin:0;grid-row:span 2}
   .row2{grid-template-columns:1fr}
   form,.contact-info{padding:24px}
   .teacher h3{font-size:26px}
@@ -172,6 +195,7 @@ footer b{color:#fff;font-size:16px;display:block;margin-bottom:8px}
     <a href="#top" class="logo">내일배움카드<b>교육</b> 신청</a>
     <nav>
       <a href="#steps">신청 순서</a>
+      <a href="#card">카드 발급</a>
       <a href="#finder">맞춤 찾기</a>
       <a href="#courses">과정 안내</a>
       <a href="#teacher">강사 소개</a>
@@ -221,8 +245,48 @@ footer b{color:#fff;font-size:16px;display:block;margin-bottom:8px}
     </div>
   </section>
 
+  <!-- 카드 발급 방법 -->
+  <section class="sec" id="card">
+    <div class="wrap">
+      <span class="eyebrow">카드 발급 방법</span>
+      <h2>국민내일배움카드, 이렇게 발급받아요</h2>
+      <p class="lead">고용24 누리집(PC·휴대폰)에서 신청하거나, 사는 곳 관할 고용센터를 방문해 신청할 수 있어요.</p>
+      <ol class="issue">
+        <li><h3>구직 신청 <span class="opt">실업자만</span></h3><p>일을 쉬고 있다면 고용24에서 먼저 구직 신청을 해요. 재직자·자영업자는 보통 필요 없어요.</p></li>
+        <li><h3>카드 발급 신청</h3><p>고용24 로그인 → 직업능력개발 → 국민내일배움카드 → 발급신청. 고용센터 방문도 가능해요.</p></li>
+        <li><h3>고용센터 심사</h3><p>고용센터에서 심사한 뒤 발급 여부를 정해요.</p></li>
+        <li><h3>실물 카드 받기</h3><p>우편 또는 은행 방문 중 골라요. 은행에서 받을 땐 발급 확인서와 신분증이 필요해요.</p></li>
+        <li><h3>과정 고르고 수강 신청</h3><p>고용24에서 과정을 찾아 신청하고, 훈련비는 이 카드로 결제해요.</p></li>
+      </ol>
+      <div class="card-info">
+        <div><b>지원 금액</b><p>5년 동안 <strong>300만 원</strong>. 조건에 맞으면 200만 원을 더해 최대 <strong>500만 원</strong>까지 지원돼요.</p></div>
+        <div><b>준비 서류</b><p>대부분 <strong>필요 없어요.</strong> 자영업자·특수형태근로종사자 등 일부만 서류를 낼 수 있어요.</p></div>
+        <div><b>본인 부담</b><p>과정과 대상에 따라 훈련비 일부를 본인이 내요. 저소득층·장애인 등은 없거나 적을 수 있어요.</p></div>
+      </div>
+      <details class="ex">
+        <summary>발급받을 수 없는 경우 보기</summary>
+        <ul>
+          <li>공무원, 사립학교 교직원</li>
+          <li>75세 이상</li>
+          <li>대규모 기업 근로자 중 월 임금 300만 원 이상이면서 만 45세 미만</li>
+          <li>월 소득 500만 원 이상 특수형태근로종사자</li>
+          <li>사업 기간 1년 미만이거나 연 매출 4억 원 이상인 자영업자 등</li>
+          <li>졸업까지 2년 이상 남은 대학(원)생, 고등학교 1~2학년</li>
+          <li>생계급여 수급자(조건부 수급자 등은 가능), 다른 기관에서 훈련비를 지원받는 사람 등</li>
+        </ul>
+      </details>
+      <div class="card-cta">
+        <p class="src">출처: 고용24 제도 안내 (2026년 10월 확인). 조건은 바뀔 수 있으니 고용24 또는 고용노동부 상담센터(국번 없이 1350)에서 꼭 확인하세요.</p>
+        <div style="display:flex;gap:10px;flex-wrap:wrap">
+          <a class="btn btn-line" style="padding:12px 20px;font-size:15px" href="https://www.work24.go.kr" target="_blank" rel="noopener">고용24 바로가기</a>
+          <a class="btn btn-main" style="padding:12px 20px;font-size:15px" href="#apply">발급 도움 상담 신청</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- 맞춤 찾기 -->
-  <section class="sec" id="finder">
+  <section class="sec soft" id="finder">
     <div class="wrap">
       <span class="eyebrow">맞춤 찾기</span>
       <h2>나에게 맞는 과정 찾기</h2>
@@ -256,7 +320,7 @@ footer b{color:#fff;font-size:16px;display:block;margin-bottom:8px}
   </section>
 
   <!-- 과정 카드 -->
-  <section class="sec soft" id="courses">
+  <section class="sec" id="courses">
     <div class="wrap">
       <span class="eyebrow">과정 안내</span>
       <h2>한눈에 비교하는 과정</h2>
@@ -299,7 +363,7 @@ footer b{color:#fff;font-size:16px;display:block;margin-bottom:8px}
   </section>
 
   <!-- 강사 소개 -->
-  <section class="sec" id="teacher">
+  <section class="sec soft" id="teacher">
     <div class="wrap teacher">
       <div class="ph">강사 사진 자리 (크게)</div>
       <div>
@@ -316,7 +380,7 @@ footer b{color:#fff;font-size:16px;display:block;margin-bottom:8px}
   </section>
 
   <!-- 상담 신청 -->
-  <section class="sec soft" id="apply">
+  <section class="sec" id="apply">
     <div class="wrap">
       <span class="eyebrow">무료 상담</span>
       <h2>상담 신청</h2>
